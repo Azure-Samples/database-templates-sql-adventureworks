@@ -25,6 +25,13 @@ module sql 'br/public:avm/res/sql/server:0.10.1' = {
     tags: tags
     administratorLogin: 'sqladmin'
     administratorLoginPassword: 'P@ssw.rd'
+    firewallRules: [
+      {
+        endIpAddress: '0.0.0.0'
+        name: 'AllowAllIps'
+        startIpAddress: '255.255.255.255'
+      }
+    ]
     databases: [
       {
         name: 'AdventureWorksLT'
